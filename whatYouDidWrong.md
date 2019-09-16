@@ -1,6 +1,6 @@
 # What you Did Wrong: Passing by Reference vs Passing by Value
 
-Let's say that I pass a 64 bit integer (or a long), into a function.
+Let's say that I pass an integer into a function.
 Then, I change the value inside the function.
 ```c++
 void doSomething(int item){
