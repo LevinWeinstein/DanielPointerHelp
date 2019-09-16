@@ -24,14 +24,16 @@ You've learned this already, __kind of__. You've learned it insofar as you under
 
 ```c++
 // Passing in by pointer, c style
-void doSomething(int *item){
+void doSomething(int *item)
+{
   // increments the value in the outer scope
   (*item)++;
 }
 
 //Passing in by reference, fancy c++ style.
 //Is harder to to explain on a low level, don't worry about this.
-void doSomoething(int &item){
+void doSomoething(int &item)
+{
   // increments the value in the outer scope.
   item++;
 }
@@ -64,13 +66,16 @@ Answer: It __won't__ change in the global scope! That is because the _pointer me
 
 using namespace  std;
 
-void printArray(int n[], int size){
-    for (int i = 0; i < size; i++){
+void printArray(int n[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         cout << n[i] << (size - 1 - i ? ' ' : '\n');
     }
 }
 
-void changeArray(int n[]){
+void changeArray(int n[])
+{
     int m[] = {3, 6, 9};
     n = m;
     printArray(n, 3);
@@ -106,9 +111,9 @@ void addWord(string word, wordItem words[], int *length);
 // which in turn called
 void resizeArray(wordItem words[]);
 ```
-The array wasn't resizing. So it would go out of bounds for a while, but eventually, shorotly after it hit 100 items, it would cause a segmentation fault.
+The array wasn't resizing. So it would go out of bounds for a while, but eventually, shortly after it hit 100 items, it would cause a segmentation fault.
 
-The solution: Instead of passing the _array_ (or _pointer_, same thing) into the functiono, pass a _pointer to that pointer_.
+The solution: Instead of passing the _array_ (or _pointer_, same thing) into the function, pass a _pointer to that pointer_.
 
 Note: this must be done in both functions in order to make it to main.
 
@@ -117,8 +122,8 @@ Note: this must be done in both functions in order to make it to main.
 void resizeArray(wordItem **words)
 {
   // ... ... ... ... 
-  for (int i = 0; i < max_length / 2; i++){
-  
+  for (int i = 0; i < max_length / 2; i++)
+  {
     newArray[i] = (*words)[i];
   }
   delete[] *words;
