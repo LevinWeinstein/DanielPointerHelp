@@ -32,7 +32,7 @@ void doSomething(int *item)
 
 //Passing in by reference, fancy c++ style.
 //Is harder to to explain on a low level, don't worry about this.
-void doSomoething(int &item)
+void doSomething(int &item)
 {
   // increments the value in the outer scope.
   item++;
