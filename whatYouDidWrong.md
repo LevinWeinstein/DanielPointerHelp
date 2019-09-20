@@ -4,7 +4,7 @@ Let's say that I pass an integer into a function.
 Then, I change the value inside the function.
 ```c++
 void doSomething(int item){
-  cout << "In function, fter incrementing: " << ++item << endl;
+  cout << "In function, after incrementing: " << ++item << endl;
 }
 
 int main(int argc, char **argv){
