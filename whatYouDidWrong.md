@@ -9,7 +9,7 @@ void doSomething(int item){
 
 int main(int argc, char **argv){
   int n = 4;
-  doSomething();
+  doSomething(n);
   cout << "Outside of function: " << item << endl;
 }
 ```
