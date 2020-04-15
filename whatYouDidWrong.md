@@ -8,8 +8,8 @@ void doSomething(int item){
 }
 
 int main(int argc, char **argv){
-  int n = 4;
-  doSomething(n);
+  int item = 4;
+  doSomething(item);
   cout << "Outside of function: " << item << endl;
 }
 ```
